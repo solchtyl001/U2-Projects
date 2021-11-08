@@ -1,3 +1,7 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class WidgetFactory {
 
     /*
@@ -28,4 +32,53 @@ public class WidgetFactory {
      Profit: $760.00
 
      */
+
+    static JTextField WidgetInput;
+    static JLabel Label;
+
+    public static void main(String[] args) {
+
+        JFrame window = new JFrame("widgets");
+        JPanel panel = new JPanel();
+        JButton button = new JButton("days to make");
+        JButton buton = new JButton("production costs");
+        Label = new JLabel("how many widgets you want?");
+        WidgetInput = new JTextField(10);
+        window.setSize(200, 200);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+        panel.add(Label);
+        panel.add(WidgetInput);
+        panel.add(button);
+        window.add(panel);
+        window.setVisible(true);
+        panel.add(buton);
+
+
+    }
+
+    private static class ButonListener implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            
+
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
